@@ -1,0 +1,12 @@
+.container
+  .row
+    .col-md-8.col-md-offset-2
+      = form_tag "#{home_parse_path}", id: 'passport-form' do |f|
+        .form-group
+          = label_tag :data, 'Passport data (example)'
+          = text_field_tag :data, nil, class: 'form-control'
+        = submit_tag 'Parse', class: 'btn btn-primary'
+
+  .row
+    .col-md-8.col-md-offset-2
+      .result
