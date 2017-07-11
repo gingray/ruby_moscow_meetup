@@ -22,6 +22,7 @@ gem 'treetop'
 group :development, :test do
   gem 'byebug', platform: :mri
   gem 'rspec-rails'
+  gem 'pry-rails'
 end
 
 

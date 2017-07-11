@@ -1,0 +1,25 @@
+grammar Passport
+  rule root
+    (fio / passport_id / born_city / born_district )+ <BaseNode>
+  end
+
+  rule fio
+    separator? ([а-яА-Я]+ ' ' [а-яА-Я]+ ' ' [а-яА-Я]+ ) separator? <FIO>
+  end
+
+  rule passport_id
+    separator? [0-9]+ ' ' [0-9]+ separator? <PassportId>
+  end
+
+  rule born_city
+    separator? ('г.'/ 'город' / 'c.' / 'cело') separator? ([а-яА-Я.]+ ) separator? <BornCity>
+  end
+
+  rule born_district
+    separator? ([а-яА-Я]+) separator? ('обл.' / 'область') separator? <BornDistrict>
+  end
+
+  rule separator
+    ([\s,])+
+  end
+end
