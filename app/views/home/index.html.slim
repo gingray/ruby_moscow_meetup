@@ -4,7 +4,7 @@
       = form_tag "#{home_parse_path}", id: 'passport-form' do |f|
         .form-group
           = label_tag :data, 'Passport data (example)'
-          = text_field_tag :data, nil, class: 'form-control'
+          = text_field_tag :data, nil, class: 'form-control', value: '4501 222321 Соколов Орел Васильевич г. Москва Московской обл.'
         = submit_tag 'Parse', class: 'btn btn-primary'
 
   .row

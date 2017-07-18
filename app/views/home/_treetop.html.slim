@@ -2,3 +2,18 @@ h1.text-center = @msg
 
 .image-result
   = image_tag @image_name, class: 'img-responsive'
+- if @passport
+  .passport
+
+    .div
+      span ФИО:
+      span= @passport.fio
+    .div
+      span Пасспорт №:
+      span = @passport.passport_id
+    .div
+      span Город:
+      span = @passport.born_city
+    .div
+      span Область:
+      span = @passport.born_district

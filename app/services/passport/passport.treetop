@@ -4,7 +4,7 @@ grammar Passport
   end
 
   rule fio
-    separator? ([а-яА-Я]+ ' ' [а-яА-Я]+ ' ' [а-яА-Я]+ ) separator? <FIO>
+    separator? [а-яА-Я]+ ' ' [а-яА-Я]+ ' ' [а-яА-Я]+ separator? <FIO>
   end
 
   rule passport_id
@@ -12,11 +12,11 @@ grammar Passport
   end
 
   rule born_city
-    separator? ('г.'/ 'город' / 'c.' / 'cело') separator? ([а-яА-Я.]+ ) separator? <BornCity>
+    separator? ('г.'/ 'город' / 'c.' / 'cело') separator? [а-яА-Я.]+ separator? <BornCity>
   end
 
   rule born_district
-    separator? ([а-яА-Я]+) separator? ('обл.' / 'область') separator? <BornDistrict>
+    separator? [а-яА-Я]+ separator? ('обл.' / 'область') separator? <BornDistrict>
   end
 
   rule separator
